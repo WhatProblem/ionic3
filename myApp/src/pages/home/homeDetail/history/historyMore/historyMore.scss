@@ -1,0 +1,32 @@
+page-historyMore {
+  ion-item {
+    border: 0px;
+
+    .item-inner {
+      border: none;
+    }
+  }
+
+  .iCards {
+    position: relative;
+
+    .filmTitle {
+      position: absolute;
+      width: 100%;
+      height: 2rem;
+      line-height: 2rem;
+      bottom: 3.5rem;
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+    }
+  }
+
+  .tips {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    color: #666;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,13 @@
+<ion-slides *ngIf="len>=1" autoplay="3000" effect="slide" loop="true" pager="true" speed="600" (ionSlideAutoplay)="slideMove()">
+    <ion-slide *ngFor="let slide of banDatas;let i=index;">
+        <div class="slideBg" (click)="jumpToDetail(slide,i)">
+            <img [src]="slide.bgSrc" class="slide-image" />
+            <div class="filmDetail">
+                <!--<h2 class="slide-title" [innerHTML]="slide.filmTitle"></h2>-->
+                <h4 class="slide-title"><span class="titleLeft">影片名:</span><span class="titleRight">{{slide.filmTitle}}</span></h4>
+                <!--<p [innerHTML]="slide.filmIntroduce"></p>-->
+                <p><span class="detailLeft">详情介绍:</span><span class="detailRight">{{slide.filmIntroduce}}</span></p>
+            </div>
+        </div>
+    </ion-slide>
+</ion-slides>

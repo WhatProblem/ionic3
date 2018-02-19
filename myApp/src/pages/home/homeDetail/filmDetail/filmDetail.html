@@ -1,0 +1,28 @@
+<div class="playSection">
+    <h6>{{allDatas?.filmTitle}}</h6>
+    <div class="videoContent">
+        <div class="video">
+            <video [src]="allDatas?.playSrc" width="" controls="controls" poster="../../../../assets/videos/1.jpg"></video>
+        </div>
+        <!--<div class="trailers">
+            <h6>影片片花</h6>
+            <div class="trailersContent"></div>
+        </div>-->
+    </div>
+    <div class="filmIntroduce">
+        <div class="title">影片介绍:</div>
+        <div class="arrow">
+            <ion-icon name="arrow-down"></ion-icon>
+        </div>
+        <div class="introduce">{{allDatas?.filmIntroduce}}</div>
+    </div>
+    <div class="major">
+        <h6>演员:</h6>
+        <div class="role">
+            <div class="roleContainer" *ngFor="let role of roleList;let i=index">
+                <img [src]="role.playPhoto" alt="">
+                <div class="roleName">{{role?.playName}}</div>
+            </div>
+        </div>
+    </div>
+</div>

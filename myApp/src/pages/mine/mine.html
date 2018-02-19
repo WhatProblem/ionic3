@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>个人设置</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="sets">
+        <ion-list inset class="avatar">
+            <ion-item>
+                <div class="userPhoto">
+                    <img src="../../assets/imgs/logo.png" alt="">
+                </div>
+                <h6>用户xxx</h6>
+            </ion-item>
+        </ion-list>
+        <ion-list inset class="singleSet">
+            <ion-item (click)="jumpToDetail()">
+                <ion-icon name="device" class="device" item-start></ion-icon>
+                设备名称
+                <ion-icon name="arrowRight" class="arrowRight" item-end></ion-icon>
+            </ion-item>
+            <ion-item (click)="jumpToDetail()">
+                <ion-icon name="redHeart" class="favorite" item-start></ion-icon>
+                收藏记录
+                <ion-icon name="arrowRight" class="arrowRight" item-end></ion-icon>
+            </ion-item>
+            <ion-item (click)="jumpToDetail()">
+                <ion-icon name="subscribe" class="subscribe" item-start></ion-icon>
+                购买记录
+                <ion-icon name="arrowRight" class="arrowRight" item-end></ion-icon>
+            </ion-item>
+            <ion-item (click)="jumpToDetail()">
+                <ion-icon name="history" class="history" item-start></ion-icon>
+                历史记录
+                <ion-icon name="arrowRight" class="arrowRight" item-end></ion-icon>
+            </ion-item>
+        </ion-list>
+        <ion-list inset class="singleSettings">
+            <ion-item (click)="jumpToDetail()">
+                <ion-icon name="settings" class="settings" item-start></ion-icon>
+                设置
+                <ion-icon name="arrowRight" class="arrowRight" item-end></ion-icon>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

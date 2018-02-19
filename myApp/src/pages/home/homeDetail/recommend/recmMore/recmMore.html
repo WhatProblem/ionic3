@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title (click)="goBack()">推荐影片列表</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding cache-view="false">
+    <!--<ion-card class="iCards" *ngFor="let data of allDatas;let i=index">
+        <img [src]="'../'+data.bgSrc">
+        <h6 class="filmTitle">{{data?.filmTitle}}</h6>
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                    <ion-icon name="star" style="width: 2rem;"></ion-icon>
+                    <div>1175</div>
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                    <ion-icon *ngIf="data.isFav === '1'" name="redHeart" style="width: 2rem;"></ion-icon>
+                    <ion-icon *ngIf="data.isFav === '0'" name="grayHeart" style="width: 2rem;"></ion-icon>
+                    <div *ngIf="data.isFav === '1'" >已收藏</div>
+                    <div *ngIf="data.isFav === '0'" >未收藏</div>
+                </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>-->
+
+    <ion-list>
+        <ion-item no-lines *ngFor="let data of onceScroll;let i=index">
+            <ion-card class="iCards">
+                <img [src]="'../'+data.bgSrc" (click)="jumpToDetail(data)">
+                <h6 class="filmTitle">{{data?.filmTitle}}</h6>
+                <ion-row>
+                    <ion-col>
+                        <button ion-button icon-left clear small>
+                            <ion-icon name="star" style="width: 2rem;"></ion-icon>
+                            <div>1175</div>
+                        </button>
+                    </ion-col>
+                    <ion-col>
+                        <button ion-button icon-left clear small>
+                            <ion-icon *ngIf="data.isFav === '1'" name="redHeart" style="width: 2rem;"></ion-icon>
+                            <ion-icon *ngIf="data.isFav === '0'" name="grayHeart" style="width: 2rem;"></ion-icon>
+                            <div *ngIf="data.isFav === '1'" >已收藏</div>
+                            <div *ngIf="data.isFav === '0'" >未收藏</div>
+                        </button>
+                    </ion-col>
+                </ion-row>
+
+            </ion-card>
+        </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)" threshold="100px" bottom>
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据..."></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    <div *ngIf="showTips" class="tips">...我是有底线的...</div>
+</ion-content>

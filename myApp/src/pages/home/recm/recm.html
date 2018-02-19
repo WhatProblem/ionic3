@@ -1,0 +1,105 @@
+<div class="recm">
+    <h6>推荐列表</h6>
+    <ion-slides spaceBetween="7%">
+        <ion-slide *ngFor="let data of slideDatas;let i=index">
+            <div class="recmList">
+                <div class="list" *ngIf="data[0]">
+                    <div class="img" (click)="jumpToDetail(data[0])">
+                        <img [src]="data[0]['bgSrc']" alt="">
+                        <div class="title">{{data[0]['filmTitle']}}</div>
+                    </div>
+                    <div class="filmInfo">
+                        <div class="isFav">
+                            <div class="iconHeart">
+                                <ion-icon *ngIf="data[0]['isFav'] == '1'" class="favIcon" name="redHeart"></ion-icon>
+                                <ion-icon *ngIf="data[0]['isFav'] == '0'" class="favIcon" name="grayHeart"></ion-icon>
+                            </div>
+                            <div *ngIf="data[0]['isFav'] == '0'" class="tip">未收藏</div>
+                            <div *ngIf="data[0]['isFav'] == '1'" class="tip">已收藏</div>
+                        </div>
+                        <div class="favInfo">
+                            <div class="iconStar">
+                                <ion-icon class="totalIcon" name="star"></ion-icon>
+                            </div>
+                            <div class="totalNum">1175</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list" *ngIf="data[1]">
+                    <div class="img" (click)="jumpToDetail(data[1])">
+                        <img [src]="data[1]['bgSrc']" alt="">
+                        <div class="title">{{data[1]['filmTitle']}}</div>
+                    </div>
+                    <div class="filmInfo">
+                        <div class="isFav">
+                            <div class="iconHeart">
+                                <ion-icon *ngIf="data[1]['isFav'] == '1'" class="favIcon" name="redHeart"></ion-icon>
+                                <ion-icon *ngIf="data[1]['isFav'] == '0'" class="favIcon" name="grayHeart"></ion-icon>
+                            </div>
+                            <div *ngIf="data[1]['isFav'] == '0'" class="tip">未收藏</div>
+                            <div *ngIf="data[1]['isFav'] == '1'" class="tip">已收藏</div>
+                        </div>
+                        <div class="favInfo">
+                            <div class="iconStar">
+                                <ion-icon class="totalIcon" name="star"></ion-icon>
+                            </div>
+                            <div class="totalNum">1175</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list" *ngIf="data[2]">
+                    <div class="img" (click)="jumpToDetail(data[2])">
+                        <img [src]="data[2]['bgSrc']" alt="">
+                        <div class="title">{{data[2]['filmTitle']}}</div>
+                    </div>
+                    <div class="filmInfo">
+                        <div class="isFav">
+                            <div class="iconHeart">
+                                <ion-icon *ngIf="data[2]['isFav'] == '1'" class="favIcon" name="redHeart"></ion-icon>
+                                <ion-icon *ngIf="data[2]['isFav'] == '0'" class="favIcon" name="grayHeart"></ion-icon>
+                            </div>
+                            <div *ngIf="data[2]['isFav'] == '0'" class="tip">未收藏</div>
+                            <div *ngIf="data[2]['isFav'] == '1'" class="tip">已收藏</div>
+                        </div>
+                        <div class="favInfo">
+                            <div class="iconStar">
+                                <ion-icon class="totalIcon" name="star"></ion-icon>
+                            </div>
+                            <div class="totalNum">1175</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-slide>
+        <!--<ion-slide>
+            <div class="recmList">
+                <div class="list">
+                    <div class="img">
+                        <img src="../../../assets/imgs/homeImg/recmImg/1.jpg" alt="">
+                        <div class="title">filmName</div>
+                    </div>
+                    <div class="filmInfo">
+                        <div class="isFav">
+                            <div class="iconHeart">
+                                <ion-icon class="favIcon" name="grayHeart"></ion-icon>
+                            </div>
+                            <div class="tip">未收藏</div>
+                        </div>
+                        <div class="favInfo">
+                            <div class="iconStar">
+                                <ion-icon class="totalIcon" name="star"></ion-icon>
+                            </div>
+                            <div class="totalNum">1175</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list">
+                    <img src="../../../assets/imgs/homeImg/recmImg/2.jpg" alt="">
+                </div>
+                <div class="list">
+                    <img src="../../../assets/imgs/homeImg/recmImg/3.jpg" alt="">
+                </div>
+            </div>
+        </ion-slide>-->
+    </ion-slides>
+</div>

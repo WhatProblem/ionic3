@@ -1,0 +1,12 @@
+import { Injectable } from '@angular/core';
+
+
+
+@Injectable()
+export class AjaxService {
+    constructor() { }
+    xhr() {
+        let xmlHttp = new XMLHttpRequest();
+        return xmlHttp;
+    }
+}
