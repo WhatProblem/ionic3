@@ -17,7 +17,7 @@ node app.js
 <br><br>
 
 提示：“服务创建成功”，即后台搭建完成
-<br><br><br><br>
+<br><br>
 
 
 ##2.APP项目启动
@@ -28,7 +28,6 @@ npm install 或 cnpm install
 <br><br>
 
 cordova环境搭建完成后，执行
-
 <br><br>
 ionic serve
 <br><br>
