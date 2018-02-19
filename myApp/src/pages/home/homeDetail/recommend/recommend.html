@@ -1,0 +1,38 @@
+<div class="recom">
+    <h6>推荐影片</h6>
+    <div class="recomContent">
+        <div class="recomDetail" *ngFor="let recm of recmList;let i=index;">
+            <img [src]="recm.bgSrc" alt=""  (click)="jumpToDetail(recm)">
+            <div class="favAndStar">
+                <div class="flexPosition">
+                    <div class="fav">
+                        <ion-icon class="star" name="star"></ion-icon>
+                        <span>1175</span>
+                    </div>
+                    <div class="star">
+                        <ion-icon *ngIf="recm.isFav === '1'" class="heart" name="redHeart"></ion-icon>
+                        <ion-icon *ngIf="recm.isFav === '0'" class="heart" name="grayHeart"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <h6>{{recm?.filmTitle}}</h6>
+        </div>
+        <!--<div class="recomDetail">
+            <img src="../../../../assets/imgs/homeDetail/recmImg/12.jpg" alt="">
+            <div class="favAndStar">
+                <div class="flexPosition">
+                    <div class="fav">
+                        <ion-icon class="star" name="star"></ion-icon>
+                        <span>1175</span>
+                    </div>
+                    <div class="star">
+                        <ion-icon class="heart" name="redHeart"></ion-icon>
+                        <ion-icon *ngIf="false" class="heart" name="grayHeart"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <h6>影片名称</h6>
+        </div>-->
+        <h6 class="moreList" (click)="goMore()">更多>></h6>
+    </div>
+</div>

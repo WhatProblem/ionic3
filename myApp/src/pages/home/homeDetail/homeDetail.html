@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title (click)="goBack()">homedetail</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding cache-view="false">
+    <div class="filmDetail">
+        <page-filmDetail [detailData]="detailData"></page-filmDetail>
+    </div>
+    <div class="recommend">
+        <page-recommend [recmData]="recmData"></page-recommend>
+    </div>
+    <div class="historyList">
+        <page-historyList [historyData]="historyData"></page-historyList>
+    </div>
+</ion-content>

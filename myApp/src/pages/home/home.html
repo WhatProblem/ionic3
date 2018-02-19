@@ -1,0 +1,25 @@
+<ion-header>
+  <!--<div class="logo">
+    <ion-icon class="myLogo" name="logo"></ion-icon>
+  </div>-->
+  <page-search class="search"></page-search>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="页面刷新中...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <div class="banner">
+    <page-banner [banData]="banData"></page-banner>
+  </div>
+  <div>
+    <page-newFilm [newFilmData]="newFilmData"></page-newFilm>
+  </div>
+  <div>
+    <page-recm [recmData]="recmData"></page-recm>
+  </div>
+  <div>
+    <page-pop [popData]="popData"></page-pop>
+  </div>
+</ion-content>

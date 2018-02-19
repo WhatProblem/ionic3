@@ -1,0 +1,114 @@
+<div class="newFilm">
+    <h6>最新影片</h6>
+    <ion-slides>
+        <ion-slide *ngFor="let data of newData;let i=index;">
+            <div class="filmList">
+                <div class="listLeft">
+                    <div class="leftTop" *ngIf="data[0]">
+                        <!--<img src="../../../assets/imgs/homeImg/newImg/1.jpg" alt="">-->
+                        <img [src]="data[0]['bgSrc']" alt="" (click)="jumpToDetail(data[0])">
+                        <div class="details">
+                            <h5>{{data[0]['filmTitle']}}</h5>
+                            <p>{{data[0]['filmTime']}},{{data[0]['filmArea']}}</p>
+                        </div>
+                        <div class="isFav">
+                            <ion-icon *ngIf="data[0]['isFav'] == '1'" class="favIcon" name="redHeart"></ion-icon>
+                            <ion-icon *ngIf="data[0]['isFav'] == '0'" class="favIcon" name="grayHeart"></ion-icon>
+                        </div>
+                        <div class="score">
+                            <span class="scoreNum">8.0</span><span class="scoreTitle">分</span>
+                        </div>
+                    </div>
+                    <div class="leftBottom" *ngIf="data[1]">
+                        <!--<img src="../../../assets/imgs/homeImg/newImg/2.jpg" alt="">-->
+                        <img [src]="data[1]['bgSrc']" alt="" (click)="jumpToDetail(data[1])">
+                        <div class="details">
+                            <h5>{{data[1]['filmTitle']}}</h5>
+                            <p>{{data[1]['filmTime']}},{{data[1]['filmArea']}}</p>
+                        </div>
+                        <div class="isFav">
+                            <ion-icon *ngIf="data[1]['isFav'] =='1'" class="favIcon" name="redHeart"></ion-icon>
+                            <ion-icon *ngIf="data[1]['isFav'] == '0'" class="favIcon" name="grayHeart"></ion-icon>
+                        </div>
+                        <div class="score">
+                            <span class="scoreNum">8.0</span><span class="scoreTitle">分</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="listRight" *ngIf="data[2]">
+                    <div class="rightContent">
+                        <!--<img src="../../../assets/imgs/homeImg/newImg/11.jpg" alt="">-->
+                        <img [src]="data[2]['bgSrc']" alt="" (click)="jumpToDetail(data[2])">
+                        <div class="details">
+                            <h5>{{data[2]['filmTitle']}}</h5>
+                            <p>{{data[2]['filmTime']}},{{data[2]['filmArea']}}</p>
+                        </div>
+                        <div class="isFav">
+                            <ion-icon *ngIf="data[2]['isFav'] == '1'" class="favIcon" name="redHeart"></ion-icon>
+                            <ion-icon *ngIf="data[2]['isFav'] == '0'" class=" favIcon" name="grayHeart"></ion-icon>
+                        </div>
+                        <div class="score">
+                            <span class="scoreNum">8.0</span><span class="scoreTitle">分</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-slide>
+        <!--<ion-slide>
+            <div class="filmList">
+                <div class="list">
+                    <img src="../../../assets/imgs/homeImg/newImg/1.jpg" alt="">
+                    <div class="introduce">
+                        <div class="title">影片1</div>
+                        <div class="areaTime">2017/10/1,中国大陆</div>
+                        <div class="role">xxx,yyy</div>
+                        <div class="isFav">
+                            <ion-icon class="favIcon" name="redHeart"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="score">
+                        <div class="scoreNum">8.0</div>
+                        <div class="scoreTitle">分</div>
+                    </div>
+                </div>
+                <div class="list">
+                    <img src="../../../assets/imgs/homeImg/newImg/2.jpg" alt="">
+                </div>
+                <div class="list">
+                    <img src="../../../assets/imgs/homeImg/newImg/3.jpg" alt="">
+                </div>
+                <div class="list">
+                    <img src="../../../assets/imgs/homeImg/newImg/4.jpg" alt="">
+                </div>
+            </div>
+        </ion-slide>-->
+        <!--<ion-slide>
+            <div class="filmList">
+                <div class="list">
+                    <img src="../../../assets/imgs/homeImg/newImg/1.jpg" alt="">
+                    <div class="introduce">
+                        <div class="title">影片1</div>
+                        <div class="areaTime">2017/10/1,中国大陆</div>
+                        <div class="role">xxx,yyy</div>
+                        <div class="isFav">
+                            <ion-icon class="favIcon" name="redHeart"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="score">
+                        <div class="scoreNum">8.0</div>
+                        <div class="scoreTitle">分</div>
+                    </div>
+                </div>
+                <div class="list">
+                    <img src="../../../assets/imgs/homeImg/newImg/2.jpg" alt="">
+                </div>
+                <div class="list">
+                    <img src="../../../assets/imgs/homeImg/newImg/3.jpg" alt="">
+                </div>
+                <div class="list">
+                    <img src="../../../assets/imgs/homeImg/newImg/4.jpg" alt="">
+                </div>
+            </div>
+        </ion-slide>-->
+    </ion-slides>
+</div>

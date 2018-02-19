@@ -1,0 +1,171 @@
+page-newFilm {
+  .newFilm {
+    width: 100%;
+    margin-top: 1.5rem;
+
+    h6 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .filmList {
+      display: flex;
+      justify-content: space-around;
+
+      .listLeft {
+        width: 48%;
+
+        .leftTop {
+          margin-bottom: 2%;
+        }
+
+        .leftTop,
+        .leftBottom {
+          width: 100%;
+          height: 49%;
+          position: relative;
+          border: 1px solid #333;
+
+          .details {
+            width: 100%;
+            height: 4rem;
+            background: rgba(60, 60, 60, 0.75);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            text-align: left;
+            color: #fff;
+            font-size: 1.2rem;
+
+            h5 {
+              width: 10rem;
+              height: 2rem;
+              line-height: 2rem;
+              font-size: 1.2rem;
+              display: block;
+              overflow: hidden;
+              word-break: keep-all;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+
+            p {
+              width: 100%;
+              height: 2rem;
+              line-height: 2rem;
+            }
+          }
+
+          .isFav {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+
+            .favIcon {
+              width: 2.5rem;
+              height: 2.5rem;
+            }
+          }
+
+          .score {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4rem;
+            height: 1.8rem;
+            background: rgba(85, 85, 85, 0.75);
+            font-size: 1.5rem;
+
+            .scoreNum {
+              color: orange;
+              text-align: left;
+              margin-right: 0.3rem;
+            }
+
+            .scoreTitle {
+              color: #fff;
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .listRight {
+        width: 48%;
+        border: 1px solid #333;
+
+        .rightContent {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          .details {
+            width: 100%;
+            height: 6rem;
+            background: rgba(60, 60, 60, 0.75);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            text-align: left;
+            color: #fff;
+            font-size: 1.5rem;
+
+            h5 {
+              width: 10rem;
+              height: 3rem;
+              line-height: 3rem;
+              font-size: 1.5rem;
+              display: block;
+              overflow: hidden;
+              word-break: keep-all;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+
+            p {
+              width: 100%;
+              height: 3rem;
+              line-height: 3rem;
+            }
+          }
+
+          .isFav {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+
+            .favIcon {
+              width: 2.5rem;
+              height: 2.5rem;
+            }
+          }
+
+          .score {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4rem;
+            height: 1.8rem;
+            background: rgba(85, 85, 85, 0.75);
+            font-size: 1.5rem;
+
+            .scoreNum {
+              color: orange;
+              text-align: left;
+              margin-right: 0.3rem;
+            }
+
+            .scoreTitle {
+              color: #fff;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}

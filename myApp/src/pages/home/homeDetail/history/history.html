@@ -1,0 +1,22 @@
+<div class="recom">
+    <h6>播放历史记录</h6>
+    <div class="recomContent">
+        <div class="recomDetail" *ngFor="let data of allDatas;let i=index;">
+            <img [src]="data.bgSrc" alt=""  (click)="jumpToDetail(data)">
+            <div class="favAndStar">
+                <div class="flexPosition">
+                    <div class="fav">
+                        <ion-icon class="star" name="star"></ion-icon>
+                        <span>1175</span>
+                    </div>
+                    <div class="star">
+                        <ion-icon *ngIf="data.isFav === '1'" class="heart" name="redHeart"></ion-icon>
+                        <ion-icon *ngIf="data.isFav === '0'" class="heart" name="grayHeart"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <h6>{{data?.filmTitle}}</h6>
+        </div>
+        <h6 class="moreList" (click)="goMore()">更多>></h6>
+    </div>
+</div>

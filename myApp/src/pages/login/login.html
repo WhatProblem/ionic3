@@ -1,0 +1,23 @@
+<ion-content class="content">
+    <div class="loginInputs">
+        <form action="">
+            <ion-list class="inputs">
+                <ion-item>
+                    <ion-input #username type="text" placeholder="Username"></ion-input>
+                </ion-item>
+                <p class="errTips" [hidden]="username.value != ''||ctrlTips">
+                    用户名(邮箱)输入有误
+                </p>
+                <ion-item>
+                    <ion-input #pwd type="password" placeholder="Password"></ion-input>
+                </ion-item>
+                <p class="errTips" [hidden]="pwd.value != ''||ctrlTips">
+                    密码必须6位或以上
+                </p>
+            </ion-list>
+            <div class="btn">
+                <button ion-button color="secondary" (click)="doLogin(username.value,pwd.value)">Login</button>
+            </div>
+        </form>
+    </div>
+</ion-content>

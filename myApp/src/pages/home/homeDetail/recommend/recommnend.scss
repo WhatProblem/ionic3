@@ -1,0 +1,71 @@
+page-recommend {
+  width: 100%;
+
+  .recom {
+    margin-top: 1rem;
+
+    h6 {
+      height: 2rem;
+      line-height: 2rem;
+    }
+
+    .recomContent {
+      width: 100%;
+
+      .recomDetail {
+        width: 48%;
+        margin: 0 1%;
+        position: relative;
+        float: left;
+
+        .favAndStar {
+          width: 100%;
+          position: absolute;
+          height: 2rem;
+          bottom: 2rem;
+          background: rgba(0, 0, 0, 0.85);
+          color: #fff;
+
+          .flexPosition {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .fav {
+              .star {
+                width: 1.5rem;
+              }
+
+              span {
+                display: inline-block;
+                position: relative;
+                bottom: 0.1rem;
+              }
+            }
+
+            .star {
+              .heart {
+                width: 2rem;
+              }
+            }
+          }
+        }
+
+        h6 {
+          height: 2rem;
+          line-height: 2rem;
+        }
+      }
+      .moreList{
+        clear: both;
+        content: '';
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+        color: #666;
+        text-align: right;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

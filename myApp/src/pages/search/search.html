@@ -1,0 +1,23 @@
+<!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-list>
+    <ion-item *ngFor="let item of items">
+        {{ item }}
+    </ion-item>
+</ion-list>-->
+
+<!--<ion-searchbar></ion-searchbar>-->
+<!--<ion-list>
+    <ion-item>
+    
+    </ion-item>
+</ion-list>-->
+
+<div class="header">
+    <div class="logo">
+        <ion-icon class="myLogo" name="logo"></ion-icon>
+    </div>
+    <div class="search">
+        <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
+        </ion-searchbar>
+    </div>
+</div>

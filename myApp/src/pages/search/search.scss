@@ -1,0 +1,34 @@
+page-search {
+  .header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.75);
+
+    .logo {
+      width: 12.5%;
+      display: flex;
+      justify-content: center;
+
+      .myLogo {
+        width: 3rem;
+      }
+    }
+
+    .search {
+      width: 87.5%;
+      display: flex;
+    }
+
+    // ion-searchbar input.searchbar-input {
+    //   background-color: red;
+    //   border-color: red;
+    //   color: white;
+    //   box-shadow: none;
+    // }
+    ion-searchbar.searchbar-ios {
+      background: none;
+    }
+  }
+}
